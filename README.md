@@ -13,6 +13,8 @@ There isn't enough easily digestible information about `cl.exe`; the Windows com
 
 - [Compiler (`cl.exe`) Options][cl]
 - [Linker (`link.exe`) Options][link]
+- [Library (`lib.exe`) Options][lib]
 
 [cl]: https://msdn.microsoft.com/en-us/library/19z1t1wy(v=vs.120).aspx
 [link]: https://msdn.microsoft.com/en-us/library/y0zzbyt4.aspx
+[lib]: https://msdn.microsoft.com/en-us/library/0xb6w1f8.aspx
