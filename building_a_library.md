@@ -59,17 +59,21 @@ int main(void)
 <br>
 <br>
 
-#### Compile Library
+#### Compile
 
 Before compiling anything, you will need to setup your environment.
 
 **term.bat**
 
 ```bat
-set PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE;%PATH%
+set PATH=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE;%PATH%
 call "c:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x86
 cmd /K cls
 ```
+
+> Exchange `12.0` with `14.0` for Visual Studio 2015.
+
+**build-lib.bat**
 
 This will output `build/lib.lib`.
 
@@ -89,7 +93,7 @@ lib^
 popd
 ```
 
-#### Compile Program
+**build.bat**
 
 This will use `build/lib.lib` to compile a console application.
 
