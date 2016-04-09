@@ -1,6 +1,6 @@
 ### Building a library
 
-Starting from the bottom up, we'll build a library and then use that library in the following examples.
+Starting from the bottom up, we'll build a library and then use that library in the next example.
 
 We will have 3 files in this layout.
 
@@ -9,10 +9,12 @@ We will have 3 files in this layout.
 |---------------------|----------------------------------
 | root/               |
 |   includes/         |
-|     lib.h           | Definition of a sample function
+|     lib.h           | 1. Definition of a sample function
 |   src/              |
-|     lib.cpp         | Declaration of function
-|     main.cpp        | Use of library
+|     lib.cpp         | 2. Declaration of function
+|     main.cpp        | 3. Use of library
+|   build/            |
+|     ...             | Output goes here
 ```
 
 Here is the content of each file.
@@ -57,7 +59,16 @@ int main(void)
 <br>
 <br>
 
-### Compile Library
+#### Compile Library
+
+Before compiling anything, you will need to setup your environment.
+
+**term.bat**
+
+```bat
+set PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE;%PATH%
+call "c:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x86
+```
 
 This will output `build/lib.lib`.
 
@@ -77,7 +88,7 @@ lib^
 popd
 ```
 
-### Compile Program
+#### Compile Program
 
 This will use `build/lib.lib` to compile a console application.
 
