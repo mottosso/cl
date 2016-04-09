@@ -8,7 +8,7 @@ We will have 3 files in this layout.
 | Layout              | Description
 |---------------------|----------------------------------
 | root/               |
-|   includes/         |
+|   include/         |
 |     lib.h           | 1. Definition of a sample function
 |   src/              |
 |     lib.cpp         | 2. Declaration of function
