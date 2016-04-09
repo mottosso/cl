@@ -122,4 +122,9 @@ popd
 
 ### Running
 
-Now that you are done
+Now that you are done, you can run your program.
+
+```bat
+> build\main.exe
+Hello World!
+```
