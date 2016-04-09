@@ -128,3 +128,9 @@ Now that you are done, you can run your program.
 > build\main.exe
 Hello World!
 ```
+
+This program is:
+
+1. Calling a function defined in `lib.h`.
+2. Which is defined in `lib.cpp`
+3. And provided to our application via `lib.lib`
