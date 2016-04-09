@@ -8,7 +8,7 @@ We will have 3 files in this layout.
 | Layout              | Description
 |---------------------|----------------------------------
 | root/               |
-|   include/         |
+|   include/          |
 |     lib.h           | 1. Definition of a sample function
 |   src/              |
 |     lib.cpp         | 2. Declaration of function
@@ -134,3 +134,11 @@ This program is:
 1. Calling a function defined in `lib.h`.
 2. Which is defined in `lib.cpp`
 3. And provided to our application via `lib.lib`
+
+You will note that if you excluded `lib.lib` from your `build.bat` script, an error is thrown.
+
+```bat
+main.obj : error LNK2019: unresolved external symbol "void __cdecl mynamespace::hello
+World(void)" (?helloWorld@mynamespace@@YAXXZ) referenced in function _main
+main.exe : fatal error LNK1120: 1 unresolved externals
+```
