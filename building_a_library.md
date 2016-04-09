@@ -57,7 +57,9 @@ int main(void)
 <br>
 <br>
 
-### Compile
+### Compile Library
+
+This will output `build/lib.lib`.
 
 ```bat
 @echo off
@@ -66,12 +68,34 @@ pushd build
 cl^
   -Zi^
   -EHsc^
-  -c^
   -I "..\include"^
+  -c^
   ..\src\lib.cpp &&^
 lib^
   lib.obj
 
 popd
+```
 
+### Compile Program
+
+This will use `build/lib.lib` to compile a console application.
+
+Notice the similarities between compilation, and differing second command; from `lib.exe` to `link.exe`.
+
+```bat
+@echo off
+pushd build
+
+cl^
+  -Zi^
+  -EHsc^
+  -I "..\include"^
+  -c^
+  ..\src\main.cpp &&^
+link main.obj^
+  lib.lib^
+  /LIBPATH:"..\build"
+
+popd
 ```
