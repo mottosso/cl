@@ -4,6 +4,8 @@
 
 Here's a minimal source and command line for building a Windows dynamic link library, or DLL. I like to use it as a quick template for larger projects, without all the noise you get by creating a similar project in Visual Studio.
 
+**helloworld.cpp**
+
 ```cpp
 #include <stdio.h>
 #include <wchar.h>
@@ -36,7 +38,12 @@ dumpbin.exe /exports helloworld.dll
 ```
 
 Also, we use `__declspec(dllexport)` so we do not need to use a `.def` file to export the function.
-If the file is saved in `helloworld.cpp`, you would compile it from the command line like so:
+
+<br>
+<br>
+<br>
+
+### Compile
 
 ```cmd
 cl.exe /D_USRDLL /D_WINDLL helloworld.cpp /MT /link /DLL /OUT:helloworld.dll
